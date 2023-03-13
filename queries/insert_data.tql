@@ -1,0 +1,23 @@
+insert $p isa person, has name "John" , has gender "male";
+insert $p isa person, has name "Jo" , has gender "female";
+insert $p isa person, has name "Jill" , has gender "female";
+
+insert $f isa food, has name "Fried Chicken";
+
+# Insert relationships 
+match $liker isa person, has name "John"; 
+$likee isa food, has name "Fried Chicken"; 
+insert $liking(liker: $liker, likee: $likee) isa liking;
+
+match $liker isa person, has name "Jo"; 
+$likee isa food, has name "Fried Chicken"; 
+insert $liking(liker: $liker, likee: $likee) isa liking;
+
+match $liker isa person, has name "John"; 
+$likee isa person, has name "Jo"; 
+insert $liking(liker: $liker, likee: $likee) isa liking;
+
+match $liker isa person, has name "Jo"; 
+$likee isa person, has name "John"; 
+insert $liking(liker: $liker, likee: $likee) isa liking;
+

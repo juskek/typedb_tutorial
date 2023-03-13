@@ -1,0 +1,17 @@
+# Show all things
+#match $x isa thing;
+
+# Show people who like fried chicken
+#match 
+#    $food isa food, has name "Fried Chicken"; # show food var which is fried chicken
+#    $liking (liker: $liker, likee: $food) isa liking; # show relations where fried chicken is likee
+#    $x isa name; # show names 
+
+# Show people who like people
+#match
+#    $x isa person, has $name1, has $gender1; # get person 1
+#    $y isa person, has $name2, has $gender2; # get person 2
+#    $liking (liker: $x, likee: $y) isa liking; # match relations if person 1 likes person 2
+
+    
+

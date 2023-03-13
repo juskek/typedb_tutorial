@@ -1,0 +1,22 @@
+define
+    person sub entity,
+        owns name,
+        owns gender,
+        plays liking:liker,
+        plays liking:likee;
+    
+    food sub entity,
+        owns name,
+        plays liking:likee;
+
+    liking sub relation,
+        relates liker,
+        relates likee;  
+    
+    name sub attribute,
+        value string;
+        
+    gender sub attribute,
+        value string;
+        
+        
